@@ -8,6 +8,17 @@
     tools:context=".MainActivity"
     android:background="@color/colorBackground">
 
-
+    <Button
+        android:id="@+id/activity_launch_toast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/small_padding"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:text="@string/launch_toast_activity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
