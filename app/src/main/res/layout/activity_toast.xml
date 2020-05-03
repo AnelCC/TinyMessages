@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/small_margin"
-    tools:context=".ToastActivity"
+    tools:context=".toast.ToastActivity"
     android:background="@color/colorGreenBackground">
 
     <TextView

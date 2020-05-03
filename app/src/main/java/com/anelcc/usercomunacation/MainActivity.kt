@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import com.anelcc.usercomunacation.snackbar.SnackbarActivity
+import com.anelcc.usercomunacation.toast.ToastActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -13,10 +15,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
 
         findViewById<View>(R.id.activity_launch_toast).setOnClickListener(this)
+        findViewById<View>(R.id.activity_launch_snackbar).setOnClickListener(this)
     }
 
-    override fun onClick(v: View?) {
-        Log.d("MainActivity", "LaunchToast ")
-        startActivity(Intent(this, ToastActivity::class.java))
+    override fun onClick(v: View) {
+        when (v.id) {
+            R.id.activity_launch_toast -> startActivity(Intent(this, ToastActivity::class.java))
+            R.id.activity_launch_snackbar -> startActivity(Intent(this, SnackbarActivity::class.java))
+        }
     }
 }

@@ -21,4 +21,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/activity_launch_snackbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_padding"
+        android:background="@color/colorAccent"
+        android:layout_below="@+id/activity_launch_toast"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/launch_snackbar_activity"
+        app:layout_constraintStart_toStartOf="@+id/activity_launch_toast"
+        app:layout_constraintTop_toBottomOf="@+id/activity_launch_toast" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

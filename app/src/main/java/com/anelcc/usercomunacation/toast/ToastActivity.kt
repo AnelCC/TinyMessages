@@ -1,4 +1,4 @@
-package com.anelcc.usercomunacation
+package com.anelcc.usercomunacation.toast
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.RadioButton
 import android.widget.TextView
 import android.widget.Toast
+import com.anelcc.usercomunacation.R
 
 class ToastActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -27,7 +28,7 @@ class ToastActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
     private fun showToast() {
-        var toastType = "";
+        var toastType: String
         val toastDuration: Int
         val rbShort = findViewById<View>(R.id.rbShort) as RadioButton
         if (rbShort.isChecked) {
@@ -45,7 +46,7 @@ class ToastActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun showCustomToast() {
-        var toastType = "";
+        var toastType: String
         val toastDuration: Int
         val rbShort = findViewById<View>(R.id.rbShort) as RadioButton
 
@@ -59,7 +60,10 @@ class ToastActivity : AppCompatActivity(), View.OnClickListener {
 
         // Get the custom layout and inflate it
         val inflater = LayoutInflater.from(this)
-        val layout = inflater.inflate(R.layout.custom_toast_layout, findViewById(R.id.customToastLayout))
+        val layout = inflater.inflate(
+            R.layout.custom_toast_layout, findViewById(
+                R.id.customToastLayout
+            ))
 
         // Build a toast message that uses the custom layout
         val tv = layout.findViewById(R.id.textContent) as TextView
