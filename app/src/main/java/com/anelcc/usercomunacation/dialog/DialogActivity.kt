@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
 import com.anelcc.usercomunacation.R
 import com.anelcc.usercomunacation.dialog.SingleChoiceDialog.SingleChoiceDialogFragment
+import com.anelcc.usercomunacation.dialog.customdialog.CustomDialogFragment
 import com.anelcc.usercomunacation.dialog.simpledialog.SimpleDialogFragment
 import com.anelcc.usercomunacation.dialog.simpledialog.SimpleDialogListener
 import java.util.*
@@ -22,6 +23,7 @@ class DialogActivity : AppCompatActivity(), View.OnClickListener, SimpleDialogLi
         findViewById<View>(R.id.btnSimpleDialog).setOnClickListener(this)
         findViewById<View>(R.id.btnShowDatePicker).setOnClickListener(this)
         findViewById<View>(R.id.btnShowChoiceDialog).setOnClickListener(this)
+        findViewById<View>(R.id.btnShowCustomDialog).setOnClickListener(this)
 
     }
 
@@ -30,6 +32,7 @@ class DialogActivity : AppCompatActivity(), View.OnClickListener, SimpleDialogLi
             R.id.btnSimpleDialog -> showSimpleDialog()
             R.id.btnShowDatePicker ->  showCalendar()
             R.id.btnShowChoiceDialog -> showChoiceDialog()
+            R.id.btnShowCustomDialog -> showCustomDialog()
         }
     }
 
@@ -69,5 +72,10 @@ class DialogActivity : AppCompatActivity(), View.OnClickListener, SimpleDialogLi
         Log.i(TAG, "showChoiceDialog")
         val complexDialog = SingleChoiceDialogFragment()
         complexDialog.show(supportFragmentManager, "SingleChoiceDialogFragment")
+    }
+
+    private fun showCustomDialog() {
+        val customDialog = CustomDialogFragment()
+        customDialog.show(supportFragmentManager, "CustomDialogFragment")
     }
 }

@@ -42,12 +42,24 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnShowDatePicker"
         android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
         android:background="@color/colorAccent"
         android:text="@string/show_choice_dialog"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnShowCustomDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:layout_below="@+id/btnShowChoiceDialog"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/show_custom_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnShowChoiceDialog" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

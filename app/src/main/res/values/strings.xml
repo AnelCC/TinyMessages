@@ -12,4 +12,7 @@
     <string name="display_simple_dialog">Display Simple Dialog</string>
     <string name="display_date_picker">Display Date Picker</string>
     <string name="show_choice_dialog">Show Choice Dialog</string>
+    <string name="show_custom_layout">Show Custom Layout</string>
+    <string name="FirstNameHint">First name</string>
+    <string name="LastNameHint">Last name</string>
 </resources>
