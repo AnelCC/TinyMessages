@@ -12,7 +12,6 @@ take an action before they can proceed.
 - Interumptive - stop current program flow
 - Require the user to take action
 - Maintain the user's current context
-
 */
 class DialogActivity : AppCompatActivity() {
 
