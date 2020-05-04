@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import com.anelcc.usercomunacation.dialog.DialogActivity
+import com.anelcc.usercomunacation.notification.NotificationActivity
 import com.anelcc.usercomunacation.snackbar.SnackbarActivity
 import com.anelcc.usercomunacation.toast.ToastActivity
 
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         findViewById<View>(R.id.activity_launch_toast).setOnClickListener(this)
         findViewById<View>(R.id.activity_launch_snackbar).setOnClickListener(this)
         findViewById<View>(R.id.activity_launch_dialog).setOnClickListener(this)
+        findViewById<View>(R.id.activity_launch_notification).setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -25,6 +27,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.activity_launch_toast -> startActivity(Intent(this, ToastActivity::class.java))
             R.id.activity_launch_snackbar -> startActivity(Intent(this, SnackbarActivity::class.java))
             R.id.activity_launch_dialog -> startActivity(Intent(this, DialogActivity::class.java))
+            R.id.activity_launch_notification -> startActivity(Intent(this, NotificationActivity::class.java))
         }
     }
 }
