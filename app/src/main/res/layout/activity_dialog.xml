@@ -14,10 +14,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/small_margin"
         android:background="@color/colorAccent"
         android:text="@string/display_simple_dialog"
+        app:layout_constraintBottom_toTopOf="@+id/btnShowDatePicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnShowDatePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSimpleDialog"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorAccent"
+        android:text="@string/display_date_picker"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
