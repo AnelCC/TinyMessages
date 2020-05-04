@@ -6,18 +6,19 @@
     android:layout_height="match_parent"
     android:padding="@dimen/normal_padding"
     tools:context=".MainActivity"
-    android:background="@color/colorBackground">
+    android:background="@color/colorYellowBackground">
 
     <Button
         android:id="@+id/activity_launch_toast"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:padding="@dimen/small_padding"
         android:layout_centerHorizontal="true"
-        android:background="@color/colorAccent"
         android:layout_marginTop="@dimen/normal_margin"
+        android:background="@color/colorAccent"
+        android:padding="@dimen/small_padding"
         android:text="@string/launch_toast_activity"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,13 +26,28 @@
         android:id="@+id/activity_launch_snackbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/small_padding"
-        android:background="@color/colorAccent"
         android:layout_below="@+id/activity_launch_toast"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/small_margin"
+        android:background="@color/colorAccent"
+        android:padding="@dimen/small_padding"
         android:text="@string/launch_snackbar_activity"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/activity_launch_toast"
         app:layout_constraintTop_toBottomOf="@+id/activity_launch_toast" />
+
+    <Button
+        android:id="@+id/activity_launch_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_launch_snackbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/small_margin"
+        android:background="@color/colorAccent"
+        android:padding="@dimen/small_padding"
+        android:text="@string/launch_dialog_activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/activity_launch_snackbar"
+        app:layout_constraintTop_toBottomOf="@+id/activity_launch_snackbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
