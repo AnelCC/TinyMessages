@@ -7,12 +7,12 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
 import com.anelcc.usercomunacation.R
+import com.anelcc.usercomunacation.dialog.SingleChoiceDialog.SingleChoiceDialogFragment
 import com.anelcc.usercomunacation.dialog.simpledialog.SimpleDialogFragment
 import com.anelcc.usercomunacation.dialog.simpledialog.SimpleDialogListener
 import java.util.*
 
-class DialogActivity : AppCompatActivity(), View.OnClickListener,
-    SimpleDialogListener {
+class DialogActivity : AppCompatActivity(), View.OnClickListener, SimpleDialogListener {
     private val TAG = "DialogActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +21,7 @@ class DialogActivity : AppCompatActivity(), View.OnClickListener,
 
         findViewById<View>(R.id.btnSimpleDialog).setOnClickListener(this)
         findViewById<View>(R.id.btnShowDatePicker).setOnClickListener(this)
+        findViewById<View>(R.id.btnShowChoiceDialog).setOnClickListener(this)
 
     }
 
@@ -28,6 +29,7 @@ class DialogActivity : AppCompatActivity(), View.OnClickListener,
         when (v.id) {
             R.id.btnSimpleDialog -> showSimpleDialog()
             R.id.btnShowDatePicker ->  showCalendar()
+            R.id.btnShowChoiceDialog -> showChoiceDialog()
         }
     }
 
@@ -61,5 +63,11 @@ class DialogActivity : AppCompatActivity(), View.OnClickListener,
         // Set the title and show the dialog
         datePicker.setTitle("Choose a Date")
         datePicker.show()
+    }
+
+    private fun showChoiceDialog() {
+        Log.i(TAG, "showChoiceDialog")
+        val complexDialog = SingleChoiceDialogFragment()
+        complexDialog.show(supportFragmentManager, "SingleChoiceDialogFragment")
     }
 }

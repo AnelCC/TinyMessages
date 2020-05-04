@@ -11,4 +11,5 @@
     <string name="show_regular_snackbar">Show Regular Snackbar</string>
     <string name="display_simple_dialog">Display Simple Dialog</string>
     <string name="display_date_picker">Display Date Picker</string>
+    <string name="show_choice_dialog">Show Choice Dialog</string>
 </resources>
