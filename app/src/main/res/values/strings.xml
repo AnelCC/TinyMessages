@@ -7,4 +7,6 @@
     <string name="toast_duration">Toast Duration:</string>
     <string name="short_toast">Short</string>
     <string name="long_toast">Long</string>
+    <string name="show_action_snackbar">Show Action Snackbar</string>
+    <string name="show_regular_snackbar">Show Regular Snackbar</string>
 </resources>
