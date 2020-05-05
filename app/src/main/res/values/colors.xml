@@ -11,4 +11,5 @@
     <color name="colorBlueBackground">#C5CAE9</color>
     <color name="colorYellowBackground">#FFF9C4</color>
     <color name="colorOrangeBackground">#FFCCBC</color>
+    <color name="colorGreenBackground">#DCEDC8</color>
 </resources>
