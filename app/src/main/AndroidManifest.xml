@@ -18,8 +18,8 @@
         </activity>
         <activity android:name=".toast.ToastActivity" />
         <activity android:name=".snackbar.SnackbarActivity" />
-        <activity android:name=".dialog.DialogActivity"/>
-        <activity android:name=".notification.NotificationActivity"/>
+        <activity android:name=".dialog.DialogActivity" />
+        <activity android:name=".notification.NotificationActivity" />
     </application>
 
 </manifest>
