@@ -86,10 +86,12 @@ class NotificationActivity : AppCompatActivity(), View.OnClickListener {
         builder.setContentText("More text here. Expand!")
         builder.setAutoCancel(true)
         builder.setLargeIcon(BitmapFactory.decodeResource(resources, R.drawable.user_woman_icon))
+
         // Set the small subtext message
         builder.setSubText("Tap to view")
         // Set the content intent to launch our result activity
         builder.setContentIntent(pendingIntent)
+
         val bigTextStyle = NotificationCompat.BigTextStyle()
         bigTextStyle.setBigContentTitle("This is a Expand Notification")
         bigTextStyle.bigText(resources.getString(R.string.long_msg))
@@ -98,6 +100,9 @@ class NotificationActivity : AppCompatActivity(), View.OnClickListener {
         // Use the same PendingIntent as we use for the main notification action
         builder.addAction(R.mipmap.ic_launcher, "Action 1", pendingIntent)
         builder.addAction(R.mipmap.ic_launcher, "Action 2", pendingIntent)
+
+        // Set the lock screen visibility of the notification
+        builder.setVisibility(NotificationCompat.VISIBILITY_SECRET)
 
         val notification = builder.build()
         val mgr = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
