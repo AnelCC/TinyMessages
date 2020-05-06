@@ -13,11 +13,9 @@ class CustomDialogFragment : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val builder = AlertDialog.Builder(activity!!)
 
-        // Create the custom layout using the LayoutInflater class
         val inflater = activity!!.layoutInflater
         val v = inflater.inflate(R.layout.custom_dialog_layout, null)
 
-        // Build the dialog
         builder.setTitle("Please enter your info")
             .setPositiveButton("OK") { dialog, which -> Log.i(TAG, "OK Clicked") }
             .setNegativeButton("Cancel") { dialog, which -> Log.i(TAG, "Cancel clicked") }
