@@ -1,10 +1,12 @@
 package com.anelcc.usercomunacation.notification
 
+import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -24,6 +26,19 @@ class NotificationActivity : AppCompatActivity(), View.OnClickListener {
         findViewById<View>(R.id.btn_simple_notification).setOnClickListener(this)
         findViewById<View>(R.id.btn_large_notification).setOnClickListener(this)
         findViewById<View>(R.id.btn_action_notification).setOnClickListener(this)
+
+        // For API 26 and later, we have to create a channel otherwise the notification
+        // won't be displayed. This can be called multiple times without harm - if there's
+        // already a channel with the given ID then the call is ignored
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val channel = NotificationChannel(NOTIFY_CHANNEL, "Notifications", importance)
+            channel.description = "This is a notification channel"
+
+            // Register the channel with the system
+            val notificationManager = getSystemService(NotificationManager::class.java)
+            notificationManager?.createNotificationChannel(channel)
+        }
     }
 
     override fun onClick(v: View?) {
