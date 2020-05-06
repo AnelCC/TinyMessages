@@ -1,6 +1,6 @@
 # User Comunication with Kotlin
 
-Project name: **Tiny messages **
+Project name: Tiny messages
 
 ### Android
 Develop in android over Kotlin.
