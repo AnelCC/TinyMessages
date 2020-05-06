@@ -18,16 +18,12 @@ class SimpleDialogFragment : DialogFragment() {
         builder.setTitle("Peas Preference")
         builder.setMessage("Do you like sugar snap peas?")
         builder.setPositiveButton("Sure!") { dialog, which ->
-
-            Log.i(TAG, "Positive button clicked")
             simpleDialogListener!!.onPositiveResult(this@SimpleDialogFragment)
         }
         builder.setNegativeButton("No way!") { dialog, which ->
-            Log.i(TAG, "Negative button clicked")
             simpleDialogListener!!.onNegativeResult(this@SimpleDialogFragment)
         }
         builder.setNeutralButton("Not Sure") { dialog, which ->
-            Log.i(TAG, "Neutral button clicked")
             simpleDialogListener!!.onNeutralResult(this@SimpleDialogFragment)
         }
         return builder.create()

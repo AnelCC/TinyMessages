@@ -12,8 +12,6 @@ class NotificationResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_notification_result)
 
-        // When launched from an addAction Intent, we must manually cancel
-        // the notification otherwise it will stay in the status bar
         val intent = intent
         val notifyID = intent.getIntExtra("notifyID", 0)
 

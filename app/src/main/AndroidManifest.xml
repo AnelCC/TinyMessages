@@ -9,18 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.anelcc.usercomunacation.info.InfoActivity"></activity>
+        <activity android:name="com.anelcc.usercomunacation.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".toast.ToastActivity" />
-        <activity android:name=".snackbar.SnackbarActivity" />
-        <activity android:name=".dialog.DialogActivity" />
-        <activity android:name=".notification.NotificationActivity" />
-        <activity android:name=".notification.NotificationResultActivity" />
+        <activity android:name="com.anelcc.usercomunacation.toast.ToastActivity" />
+        <activity android:name="com.anelcc.usercomunacation.snackbar.SnackbarActivity" />
+        <activity android:name="com.anelcc.usercomunacation.dialog.DialogActivity" />
+        <activity android:name="com.anelcc.usercomunacation.notification.NotificationActivity" />
+        <activity android:name="com.anelcc.usercomunacation.notification.NotificationResultActivity" />
     </application>
 
 </manifest>
