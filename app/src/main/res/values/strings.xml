@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">UserComunacation</string>
+    <string name="app_name">Tiny Messages</string>
     <string name="launch_dialog_activity">Launch Dialog Activity</string>
     <string name="launch_toast_activity">Launch Toast Activity</string>
     <string name="launch_notification_activity">Launch Notification Activity</string>
@@ -15,4 +15,10 @@
     <string name="show_custom_layout">Show Custom Layout</string>
     <string name="FirstNameHint">First name</string>
     <string name="LastNameHint">Last name</string>
+    <string name="simple_notification">Show Simple Notification</string>
+    <string name="large_notification">Show Large Notification</string>
+    <string name="action_notification">Show Action Notification</string>
+    <string name="notification_news">This activity was launched as the result of a Notification</string>
+    <string name="long_msg">This is a notification style that can contain a large amount of text. It works really well when you have a large amount of information
+    to display in the notification area and want the user to be able to expand the message to see all of the content.</string>
 </resources>
